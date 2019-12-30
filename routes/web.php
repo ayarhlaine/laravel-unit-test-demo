@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about');
 });
+
+
+// Author Routes
+Route::resource('authors','AuthorController');
