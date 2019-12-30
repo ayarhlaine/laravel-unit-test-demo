@@ -17,6 +17,12 @@ class AuthorController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request->all());
+        $data = $request->validate([
+            'name' => 'required',
+            'address' => ''
+        ]);
+        Author::create($data);
+        
+        return redirect('/authors');
     }
 }

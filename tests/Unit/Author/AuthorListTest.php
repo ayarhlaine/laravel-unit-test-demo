@@ -5,9 +5,12 @@ namespace Tests\Unit\Author;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use App\Author;
 class AuthorList extends TestCase
 {
+    use DatabaseMigrations;
     /** @test */
     public function can_call_index_page_route()
     {
