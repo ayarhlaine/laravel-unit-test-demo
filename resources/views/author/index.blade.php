@@ -8,7 +8,7 @@
                     <h5>Authors: </h5>
                 </div>
                 <div class="col-md-6 text-right">
-                    <button class="btn btn-success btn-sm">Add Author</button>
+                    <a href="/authors/create" class="btn btn-success btn-sm">Add Author</a>
                 </div>
             </div>
             <br>

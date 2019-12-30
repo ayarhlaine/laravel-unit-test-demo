@@ -11,4 +11,12 @@ class AuthorController extends Controller
         $authors = Author::all();
         return view('author.index')->with('authors',$authors);
     }
+    public function create(Request $request)
+    {
+       return view('author.create');
+    }
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }
