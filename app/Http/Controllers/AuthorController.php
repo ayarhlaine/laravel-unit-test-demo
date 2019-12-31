@@ -35,4 +35,12 @@ class AuthorController extends Controller
         $author = Author::findOrFail($id);
         return view('author.edit')->with('author',$author);
     }
+    public function update($id,Request $request)
+    {
+        $author = Author::findOrFail($id);
+        $author->name = $request->name;
+        $author->address = $request->address;
+        $author->save();
+        return redirect('/authors');
+    }
 }

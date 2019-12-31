@@ -4,8 +4,10 @@
    <div class="row">
        <div class="col-md-12">
            <h5>Author : Edit</h5>
-         <form action="/authors" method="post">
+         <form action="/authors/{{$author->id}}" method="post">
+            @method('put')
             @csrf
+            
             <div class="row">
                 <div class="col-md-3">
                     <label for="Author Name">Authro Name : </label>

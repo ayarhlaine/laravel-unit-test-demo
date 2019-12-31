@@ -25,7 +25,8 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     │         │── AuthorListTest.php  ( 4 tests)
     │         │── AuthorSaveTest.php  (3 tests)
     │         │── AuthorShowTest.php  (4 tests)
-    │         │── AuthorEditTest.php  (1 tests)
+    │         │── AuthorEditTest.php  (2 tests)
+    │         │── AuthorUpdateTest.php  (2 tests)
     └──
 
 #### AuthorCreateTest.php
@@ -69,3 +70,10 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     - to sure that `author.edit` must be return with together author's data as `author`
 2. will_show_404_when_author_not_found_in_edit
     - to sure to show 404 error when user call `authors/{author_id}/edit` route with author_id is not in our system
+
+#### AuthorUpdateTest.php
+1. can_update_author_data
+    - to sure that `authors/{author_id}` with put method will save to db
+    - to sure to redirect ot index list page after update success
+2. show_404_when_wrong_author_id_update
+    - to sure to show 404 error when user call `authors/{author_id}` route with author_id is not in our system
