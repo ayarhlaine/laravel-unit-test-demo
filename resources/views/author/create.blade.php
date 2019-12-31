@@ -4,6 +4,15 @@
    <div class="row">
        <div class="col-md-12">
            <h5>Author : Create</h5>
+           @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
          <form action="/authors" method="post">
             @csrf
             <div class="row">

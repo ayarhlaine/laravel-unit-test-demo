@@ -26,6 +26,7 @@ class AuthorController extends Controller
             'name' => 'required',
             'address' => ''
         ]);
+        
         Author::create($data);
         
         return redirect('/authors');
