@@ -28,9 +28,10 @@
                                     <td scope="row">{{$author->name}}</td>
                                     <td>{{$author->address}}</td>
                                     <td>
-                                        <button class="btn btn-warning">Edit</button>
+                                        <a href="/authors/{{$author->id}}" class="btn btn-primary btn-sm">View</a>
+                                        <button class="btn btn-warning btn-sm">Edit</button>
                                         <form action="/authors" method="post">
-                                            <button class="btn btn-danger">Delete</button>
+                                            <button class="btn btn-danger btn-sm">Delete</button>
                                         </form>
                                     </td>
                                 </tr>

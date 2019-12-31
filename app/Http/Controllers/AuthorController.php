@@ -11,6 +11,11 @@ class AuthorController extends Controller
         $authors = Author::all();
         return view('author.index')->with('authors',$authors);
     }
+    public function show($id)
+    {
+        $author = Author::findOrFail($id);
+        return view('author.show')->with('author',$author);
+    }
     public function create(Request $request)
     {
        return view('author.create');
