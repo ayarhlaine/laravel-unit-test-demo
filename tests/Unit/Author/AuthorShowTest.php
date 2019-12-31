@@ -20,6 +20,15 @@ class AuthorShowTest extends TestCase
    }
 
    /** @test */
+   public function author_show_route_return_author_show_view()
+   {
+        $author = factory('App\Author')->create();
+        $response = $this->get('/authors/'.$author->id);
+        $response->assertViewIs('author.show');
+   }
+   
+
+   /** @test */
    public function will_show_404_when_author_not_found()
    {
         $fake_id = 9999;

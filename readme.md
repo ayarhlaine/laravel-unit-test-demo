@@ -24,6 +24,7 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     |         │── AuthorCreateTest.php  ( 2 tests)
     │         │── AuthorListTest.php  ( 4 tests)
     │         │── AuthorSaveTest.php  (3 tests)
+    │         │── AuthorShowTest.php  (2 tests)
     └──
 
 #### AuthorCreateTest.php
@@ -50,3 +51,8 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     - to sure that author's name is required to system
 3. redirect_to_index_when_author_save_success
     - to sure to redirect to index listing page after saving author's data
+
+#### AuthorShowTest.php
+1. can_view_author_detail
+    
+2. will_show_404_when_author_not_found
