@@ -24,7 +24,7 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     |         │── AuthorCreateTest.php  ( 2 tests)
     │         │── AuthorListTest.php  ( 4 tests)
     │         │── AuthorSaveTest.php  (3 tests)
-    │         │── AuthorShowTest.php  (2 tests)
+    │         │── AuthorShowTest.php  (4 tests)
     └──
 
 #### AuthorCreateTest.php
