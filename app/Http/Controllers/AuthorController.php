@@ -43,4 +43,17 @@ class AuthorController extends Controller
         $author->save();
         return redirect('/authors');
     }
+    public function destroy($id)
+    {
+        $author = Author::find($id);
+        if(isset($author))
+        {
+            $author->delete();
+            return redirect('/authors')->with('delete-success','User Deleted');
+        }
+        else {
+            return redirect('/authors')->with('delete-fail','Fail User Delete');
+        }
+       
+    }
 }

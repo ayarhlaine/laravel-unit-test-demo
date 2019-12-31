@@ -12,6 +12,16 @@
                 </div>
             </div>
             <br>
+            @if(session()->get('delete-success'))
+                <div class="alert alert-success">
+                    {{ session()->get('delete-success') }}
+                </div>
+            @endif
+            @if(session()->get('delete-fail'))
+                <div class="alert alert-danger">
+                    {{ session()->get('delete-fail') }}
+                </div>
+            @endif
             <div class="row">
                 <div class="col-md-12">
                     <table class="table">
@@ -30,8 +40,10 @@
                                     <td>
                                         <a href="/authors/{{$author->id}}" class="btn btn-primary btn-sm">View</a>
                                         <a href="/authors/{{$author->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
-                                        <form action="/authors" method="post">
-                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                        <form action="/authors/{{$author->id}}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
