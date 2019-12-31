@@ -26,6 +26,15 @@ class AuthorShowTest extends TestCase
         $response = $this->get('/authors/'.$author->id);
         $response->assertViewIs('author.show');
    }
+
+   /** @test */
+   public function author_show_view_has_author_data()
+   {
+        $author = factory('App\Author')->create();
+        $response = $this->get('/authors/'.$author->id);
+        $response->assertViewHas('author',$author);
+   }
+   
    
 
    /** @test */

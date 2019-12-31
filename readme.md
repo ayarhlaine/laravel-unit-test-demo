@@ -54,5 +54,10 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
 
 #### AuthorShowTest.php
 1. can_view_author_detail
-    
-2. will_show_404_when_author_not_found
+    - to sure that user can view author's detail info in `authors/{author_id}` route
+2. author_show_route_return_author_show_view
+    - to sure to return view `author.show` when call `authors/{author_id}` route
+3. author_show_view_has_author_data
+    - to sure that `author.show` must be return with together author's data as `author`
+4. will_show_404_when_author_not_found
+    - to sure to show 404 error when user call `authors/{author_id}` route with author_id is not in our sytem
