@@ -27,6 +27,7 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     │         │── AuthorShowTest.php  (4 tests)
     │         │── AuthorEditTest.php  (2 tests)
     │         │── AuthorUpdateTest.php  (2 tests)
+    │         │── AuthorDeleteTest.php  (2 tests)
     └──
 
 #### AuthorCreateTest.php
@@ -77,3 +78,10 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     - to sure to redirect ot index list page after update success
 2. show_404_when_wrong_author_id_update
     - to sure to show 404 error when user call `authors/{author_id}` route with author_id is not in our system
+
+#### AuthorDeleteTest.php
+1. can_delete_author_data
+    - to sure that `authors/{author_id}` with delete method will soft delete 
+    - to sure to redirect ot index list page after delete success with `User Deleted` message
+2. delete_fail_with_nodata_id
+    - to sure that user call `authors/{author_id}` route with author_id is not in our system with `Fail User Delete` message
