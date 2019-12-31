@@ -26,10 +26,10 @@ class AuthorController extends Controller
             'name' => 'required',
             'address' => ''
         ]);
-        
+
         Author::create($data);
         
-        return redirect('/authors');
+        return redirect('/authors')->with('save-success','Author Created');
     }
     public function edit($id)
     {
@@ -42,7 +42,7 @@ class AuthorController extends Controller
         $author->name = $request->name;
         $author->address = $request->address;
         $author->save();
-        return redirect('/authors');
+        return redirect('/authors')->with('update-success','Author Updated');;
     }
     public function destroy($id)
     {

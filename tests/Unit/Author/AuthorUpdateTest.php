@@ -24,6 +24,7 @@ class AuthorUpdateTest extends TestCase
        ]);
     
        $response->assertRedirect('/authors');
+       $response->assertSessionHas('update-success', 'Author Updated');
 
    }
 

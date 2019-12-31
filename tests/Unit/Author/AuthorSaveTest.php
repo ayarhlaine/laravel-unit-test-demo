@@ -39,6 +39,7 @@ class AuthorSaveTest extends TestCase
         'name' => 'Ah',
         'address' => 'Address'
         ]);
+        $response->assertSessionHas('save-success', 'Author Created');
         $response->assertRedirect('/authors');
    }
    

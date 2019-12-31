@@ -12,6 +12,16 @@
                 </div>
             </div>
             <br>
+            @if(session()->get('save-success'))
+                <div class="alert alert-success">
+                    {{ session()->get('save-success') }}
+                </div>
+            @endif
+            @if(session()->get('update-success'))
+                <div class="alert alert-success">
+                    {{ session()->get('update-success') }}
+                </div>
+            @endif
             @if(session()->get('delete-success'))
                 <div class="alert alert-success">
                     {{ session()->get('delete-success') }}
