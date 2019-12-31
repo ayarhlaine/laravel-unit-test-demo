@@ -19,7 +19,6 @@ class AuthorSaveTest extends TestCase
         'address' => 'Address'
        ]);
        $this->assertCount(1,Author::all());
-       $response->assertStatus(302);
    }
 
    /** @test */
@@ -31,6 +30,18 @@ class AuthorSaveTest extends TestCase
         ]);
         $response->assertSessionHasErrors('name');
    }
+
+   /** @test */
+   public function redirect_to_index_when_author_save_success()
+   {
+        $this->withoutExceptionHandling();
+        $response = $this->post('/authors',[
+        'name' => 'Ah',
+        'address' => 'Address'
+        ]);
+        $response->assertRedirect('/authors');
+   }
+   
    
    
 }
