@@ -29,7 +29,7 @@
                                     <td>{{$author->address}}</td>
                                     <td>
                                         <a href="/authors/{{$author->id}}" class="btn btn-primary btn-sm">View</a>
-                                        <button class="btn btn-warning btn-sm">Edit</button>
+                                        <a href="/authors/{{$author->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
                                         <form action="/authors" method="post">
                                             <button class="btn btn-danger btn-sm">Delete</button>
                                         </form>

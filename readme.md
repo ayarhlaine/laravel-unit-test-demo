@@ -25,6 +25,7 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
     │         │── AuthorListTest.php  ( 4 tests)
     │         │── AuthorSaveTest.php  (3 tests)
     │         │── AuthorShowTest.php  (4 tests)
+    │         │── AuthorEditTest.php  (1 tests)
     └──
 
 #### AuthorCreateTest.php
@@ -60,4 +61,11 @@ This app is developed using laravel 5.7 for TDD(Test Driven Development).
 3. author_show_view_has_author_data
     - to sure that `author.show` must be return with together author's data as `author`
 4. will_show_404_when_author_not_found
-    - to sure to show 404 error when user call `authors/{author_id}` route with author_id is not in our sytem
+    - to sure to show 404 error when user call `authors/{author_id}` route with author_id is not in our system
+#### AuthorEditTest.php
+1. user_can_see_author_data
+    - to sure that user can view author's detail info in `authors/{author_id}/edit` route
+    - to sure to return view `author.edit` when call `authors/{author_id}/edit` route
+    - to sure that `author.edit` must be return with together author's data as `author`
+2. will_show_404_when_author_not_found_in_edit
+    - to sure to show 404 error when user call `authors/{author_id}/edit` route with author_id is not in our system
